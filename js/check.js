@@ -1,19 +1,18 @@
-import { _remainer } from './add.js';
-let checked = [];
+import { _remainer, todoList } from './add.js';
+let checked = new Set();
 export const checkit = (e) => {
     let id = e.target.id;
-    let val = parseInt(_remainer.value);
-    if (checked.some(v => v == id)) {
+    let val = todoList.children.length;
+    if (checked.has(id)) {
         console.log("already have id");
-        val++;
-        _remainer.value = val.toString();
+        checked.delete(id);
     }
     else {
         console.log("have not id");
-        checked.push(id);
-        val--;
-        _remainer.value = val.toString();
+        checked.add(id);
     }
-    console.log(checked, id);
+    val -= checked.size;
+    _remainer.innerText = val.toString();
+    console.log(checked, val);
 };
 //# sourceMappingURL=check.js.map
