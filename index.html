@@ -18,24 +18,28 @@
                     </ul>
                 </div>
                 <div id="remainder">
-                    <p>남은할일</p>
+                    <p>남은할일 <span id="rm_num">0</span>개</p>
                 </div>
             </div>
 
             <div class="sub-box" id="body">
                 <h2>할일 리스트 오는 자리</h2>
+                <ul id="todolist">
+
+                </ul>
                 <button>
                     버튼
                 </button>
             </div>
-
             <div class="sub-box" id="tail">
-                <label for="add">할일 추가하기</label>
-                <input type="text" id="add">
+                <form id="submit">
+                    <label for="add">할일 추가하기</label>
+                    <input type="text" id="add" name="add" required>
+                    <button type="submit">add</button>
+                </form>
             </div>
-            
         </div>
     </div>
-    <script type="" src="main.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+{
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "compilerOptions": {
+        "module": "ES2015",
+        "rootDir": "src",
+        "outDir": "js",
+        "target": "es6",
+        "lib": ["ES2015","ES6","DOM","DOM.Iterable"],
+        "sourceMap": true,
+        "removeComments": true,
+    }
+}
