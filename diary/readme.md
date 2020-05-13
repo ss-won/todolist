@@ -24,4 +24,4 @@
 
 ## 추후 더 공부해야 할 부분(이 코드는 Whyrano...)
 * html의 <script>의 type 속성값 text/javascript 와 module의 차이는 무엇인가?
-* 왜 Typescript에서 <HTMLInputElement>의 기능은 무엇인가?
+* Typescript에서 `<HTMLInputElement>`의 기능은 무엇인가?
