@@ -1,6 +1,7 @@
 import { printDate, printDay, d } from './date.js';
 import { add, submit, todoList } from './add.js';
 import { checkit } from './check.js';
+import { remove } from './rm.js';
 
 let _date = d.getDate();
 let _month = d.getMonth();
@@ -10,10 +11,5 @@ printDate(_year, _month, _date);
 printDay(_day);
 
 submit.addEventListener("submit", add);
-todoList.addEventListener("click",()=>{
-    let eArr = todoList.children;
-    for (let i = 0; i < eArr.length; i++) {
-        eArr[i].addEventListener("change", checkit);
-    }
-})
+
 

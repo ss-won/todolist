@@ -1,9 +1,9 @@
-import { _remainer, todoList } from './add.js';
-let checked = new Set();
-
+import { _remainer, todoList, indexMap } from './add.js';
+export let checked = new Set();
 export const checkit = (e) => {
-    let id = e.target.id;
-    let val = todoList.children.length;
+    console.log(e.target);
+    let id = parseInt(e.target.id);
+    let val = todoList.childElementCount;
     
     if(checked.has(id)){
         console.log("already have id");
