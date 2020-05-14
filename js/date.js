@@ -6,7 +6,7 @@ export const printDate = (y, m, dt) => {
     divDate.innerHTML = date;
 };
 export const printDay = (dy) => {
-    let Day = ['월', '화', '수', '목', '금', '토', '일'];
+    let Day = ['일', '월', '화', '수', '목', '금', '토'];
     divDay.innerHTML = "<p>" + Day[dy] + "요일</p>";
 };
 //# sourceMappingURL=date.js.map

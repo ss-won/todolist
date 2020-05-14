@@ -2,6 +2,7 @@ import {todoList, indexMap, _remainer} from './add.js';
 import {checked} from './check.js';
 
 export const remove = (e)=>{
+    e.preventDefault();
     let click_li = e.target.parentElement.parentElement;
     let click_i = click_li.firstChild.id;
     update(click_i, todoList.childElementCount);

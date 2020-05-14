@@ -1,10 +1,10 @@
 import { printDate, printDay, d } from './date.js';
-import { add, submit } from './add.js';
+import { tg } from './toggle.js';
 let _date = d.getDate();
 let _month = d.getMonth();
 let _day = d.getDay();
 let _year = d.getFullYear();
 printDate(_year, _month, _date);
 printDay(_day);
-submit.addEventListener("submit", add);
+tg.btn.addEventListener("click", tg.toggle);
 //# sourceMappingURL=main.js.map

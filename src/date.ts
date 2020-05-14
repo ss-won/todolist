@@ -12,7 +12,7 @@ export const printDate = (y, m, dt) => {
 
 export const printDay = (dy) => {
     //0-1 Mon-Sun
-    let Day = ['월', '화', '수', '목', '금', '토', '일'];
+    let Day = ['일', '월', '화', '수', '목', '금', '토'];
     divDay.innerHTML = "<p>" + Day[dy] + "요일</p>";
 }
 
