@@ -1,22 +1,71 @@
 body {
-    background-color: darkgray;
+    background-color:#d6dbdf;
 }
 
 div {
-    border: 1px solid white;
+    border: 0px;
 }
 
-a.rm, a.rm:nth-child(1) {
-    visibility: hidden;
+a {
+    display: inline-block;
 }
 
-a.rm>img {
-    opacity: 0.3;
+object{
+    pointer-events: none;
 }
 
-a.rm>img:hover {
-    opacity: 1.0;
-    fill: #ffffff;
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+#background{
+    margin-top: 5%;
+    height : 80%;
+}
+
+.main-box{
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 100%;
+}
+
+.sub-box{
+    padding-left: 10px;
+}
+
+
+#head{
+
+}
+
+#body{
+
+}
+
+#tail{
+
+}
+
+#date{
+    border-radius: inherit;
+}
+
+h2#ymd{
+    margin-bottom: 0px;
+    color: #2E2E2E;
+}
+
+p#day{
+    margin-top: 5px;
+    color: gray;
+}
+
+#remainder{
+    color: #04B486;
+    
 }
 
 

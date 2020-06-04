@@ -3,13 +3,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-List</title>
-    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="background">
-        <h2>배경</h2>
         <div class="main-box">
-            <h3>메인박스</h3>
             <div class="sub-box" id="head">
                 <div id="date">
                     <ul>
@@ -18,18 +16,21 @@
                     </ul>
                 </div>
                 <div id="remainder">
-                    <p>남은할일 <span id="rm_num">0</span>개</p>
+                    <b><p>할 일 <span id="rm_num">0</span>개 남음</p></b>
                 </div>
             </div>
 
             <div class="sub-box" id="body">
-                <h2>할일 리스트 오는 자리</h2>
                 <ul id="todolist">
                 </ul>
-
             </div>
+
             <div class="sub-box" id="tail">
-                <a href="" id="toggle">버튼</a>
+                <a href id="toggle">
+                <object type="image/svg+xml" data="/images/plus-circle.svg">
+                    Add
+                </object>
+                </a>
             </div>
         </div>
     </div>

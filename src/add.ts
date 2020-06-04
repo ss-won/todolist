@@ -1,5 +1,6 @@
 import { remove } from "./rm.js";
 import { checkit, checked } from "./check.js";
+import { tg } from './toggle.js';
 export const _remainer = (<HTMLInputElement>document.getElementById("rm_num"));
 export const todoList = document.getElementById("todolist");
 export const indexMap = new Map();
@@ -7,18 +8,22 @@ export const indexMap = new Map();
 export const add = (e) => {
   //change의 기본 동작 정지
   e.preventDefault();
-  let li = mkList();
+  //추가할 list dom 만들기
+  const li = mkList();
+  //입력창닫기
+  tg.body.removeChild(tg.body.lastChild);
+
   /*========apply eventlistener=========*/
   li.addEventListener("change", checkit);
   li.addEventListener("mouseenter",(e)=>{
     let btn = (<HTMLInputElement>e.target).lastChild;
     (<HTMLInputElement>btn).style.visibility = "visible";
-    console.log(e);
   });
   li.addEventListener("mouseleave",(e)=>{
     let btn = (<HTMLInputElement>e.target).lastChild;
     (<HTMLInputElement>btn).style.visibility = "hidden";
   })
+
   console.log(li);
   console.log(indexMap.entries());
 }
@@ -55,12 +60,32 @@ const mkInner = (li,val) => {
 
 const mkBtn = (li) => {
   const _anchor = document.createElement("a");
+  const obj = document.createElement("object");
   /*==========create image button==========*/
-  const msg = `<img src="../images/trash-solid.svg" alt="remove" height=15 width=15 />`
-  _anchor.innerHTML = msg;
+  obj.type = "image/svg+xml";
+  obj.data = "../images/trash-solid.svg";
+  obj.innerText = "이 브라우저는 svg를 지원하지 않습니다.";
+  obj.id = `obj${li.firstChild.id}`;
   _anchor.href = "";
   _anchor.className = "rm";
   /*==========apply eventlistener==========*/
   _anchor.addEventListener("click", remove);
+  _anchor.addEventListener("mouseenter",(e)=>{
+    let obj = (<HTMLInputElement>e.target).firstChild;
+    let svgDocument = (<HTMLObjectElement>obj).contentDocument;
+    let svg = svgDocument.getElementsByClassName("trash");
+    svg[0].setAttribute("fill", "#FA5858");
+    svg[0].setAttribute("style", "opacity:1");
+    //console.log(svg[0]);
+  })
+  _anchor.addEventListener("mouseleave",(e)=>{
+    let obj = (<HTMLInputElement>e.target).firstChild;
+    let svgDocument = (<HTMLObjectElement>obj).contentDocument;
+    let svg = svgDocument.getElementsByClassName("trash");
+    svg[0].setAttribute("fill", "currentColor");
+    svg[0].setAttribute("style", "opacity:0.3");
+    //console.log(svg[0]);
+  })
+  _anchor.appendChild(obj);
   return _anchor;
 }

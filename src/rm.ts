@@ -3,15 +3,16 @@ import {checked} from './check.js';
 
 export const remove = (e)=>{
     e.preventDefault();
-    let click_li = e.target.parentElement.parentElement;
+    let click_li = e.target.parentElement;
     let click_i = click_li.firstChild.id;
+    console.log(click_li,click_i);
     update(click_i, todoList.childElementCount);
     indexMap.delete(click_li);
     todoList.removeChild(click_li);
     _remainer.innerText = (indexMap.size-checked.size).toString();
     console.log(checked.entries());
     console.log(indexMap.entries());
-   // console.log(todoList.childElementCount);
+    //console.log(todoList.childElementCount);
     //console.log(typeof click_i, todoList.childElementCount);
 }
 const update = (idx:string,l:number) => {

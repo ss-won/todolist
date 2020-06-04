@@ -1,0 +1,7 @@
+.trash {
+    opacity: 0.3;
+}
+
+.plusbtn:hover {
+    fill: green;
+}

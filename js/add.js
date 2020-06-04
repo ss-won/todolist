@@ -1,16 +1,17 @@
 import { remove } from "./rm.js";
 import { checkit, checked } from "./check.js";
+import { tg } from './toggle.js';
 export const _remainer = document.getElementById("rm_num");
 export const todoList = document.getElementById("todolist");
 export const indexMap = new Map();
 export const add = (e) => {
     e.preventDefault();
-    let li = mkList();
+    const li = mkList();
+    tg.body.removeChild(tg.body.lastChild);
     li.addEventListener("change", checkit);
     li.addEventListener("mouseenter", (e) => {
         let btn = e.target.lastChild;
         btn.style.visibility = "visible";
-        console.log(e);
     });
     li.addEventListener("mouseleave", (e) => {
         let btn = e.target.lastChild;
@@ -46,11 +47,29 @@ const mkInner = (li, val) => {
 };
 const mkBtn = (li) => {
     const _anchor = document.createElement("a");
-    const msg = `<img src="../images/trash-solid.svg" alt="remove" height=15 width=15 />`;
-    _anchor.innerHTML = msg;
+    const obj = document.createElement("object");
+    obj.type = "image/svg+xml";
+    obj.data = "../images/trash-solid.svg";
+    obj.innerText = "이 브라우저는 svg를 지원하지 않습니다.";
+    obj.id = `obj${li.firstChild.id}`;
     _anchor.href = "";
     _anchor.className = "rm";
     _anchor.addEventListener("click", remove);
+    _anchor.addEventListener("mouseenter", (e) => {
+        let obj = e.target.firstChild;
+        let svgDocument = obj.contentDocument;
+        let svg = svgDocument.getElementsByClassName("trash");
+        svg[0].setAttribute("fill", "#FA5858");
+        svg[0].setAttribute("style", "opacity:1");
+    });
+    _anchor.addEventListener("mouseleave", (e) => {
+        let obj = e.target.firstChild;
+        let svgDocument = obj.contentDocument;
+        let svg = svgDocument.getElementsByClassName("trash");
+        svg[0].setAttribute("fill", "currentColor");
+        svg[0].setAttribute("style", "opacity:0.3");
+    });
+    _anchor.appendChild(obj);
     return _anchor;
 };
 //# sourceMappingURL=add.js.map
