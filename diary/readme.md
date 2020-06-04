@@ -12,7 +12,7 @@
 
 ### 지난 ver 개발일지 보러가기
 * [ver1](https://github.com/ss-won/todolist/tree/ver1.3/diary) - 2020/5/13 개발일지
-* [ver2](https://github.com/ss-won/todolist/blob/ver2.0/diary)
+* [ver2](https://github.com/ss-won/todolist/blob/ver2.0/diary) - 2020/5/20 ~ 2020/6/4 개발일지
 
 ## 현재까지 작동하는 기능
 * todolist에 할일을 입력 [add](https://github.com/ss-won/todolist/blob/ver2.0/js/add.js)
