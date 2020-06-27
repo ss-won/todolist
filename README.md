@@ -16,12 +16,22 @@ velopert님의 react로 todolist 만들기 강의에서 제작된 todolist를 �
     <br>
 
 * UI Component
+    * 날짜칸(yyyy-mm-dd)
+    * 요일칸(월-일)
+    * 남은할일 표시
+    * 할일 리스트 요소(체크박스)
+        * 체크박스
+        * 할일 명칭(라벨)
+        * 삭제 버튼(svn 객체)
+    * 추가 버튼(toggle 기능)
+        * 할일 작성 폼(input)
     <br>
 
 * 개발일지
     * [ver1.0](https://github.com/ss-won/todolist/tree/ver1.3/diary)
     * [ver2.0](https://github.com/ss-won/todolist/blob/ver2.0/diary)
     * [ver3.0](https://github.com/ss-won/todolist/blob/ver3.1/diary)
+    * [ver4.0](https://github.com/ss-won/todolist/blob/ver4.0/diary)
     
     * [개발나부랭이블로그](https://blog.naver.com/PostList.nhn?blogId=j_wish_&from=postList&categoryNo=6)
    

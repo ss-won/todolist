@@ -10,6 +10,15 @@ a {
     display: inline-block;
 }
 
+a.rm {
+    position: absolute;
+    right: 30%;
+}
+
+hr {
+    opacity: 0.3;
+}
+
 object{
     pointer-events: none;
 }
@@ -17,7 +26,60 @@ object{
 ul{
     list-style: none;
     padding-left: 0px;
+    margin-bottom: 0px;
 }
+
+li {
+    padding-bottom: 15px;
+}
+
+/* 진짜 체크박스 */
+input[type = "checkbox"] {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* 가짜 체크박스 */
+input[type="checkbox"] + label:before {
+    content: ' ';
+    display: inline-block;
+    width: 21px;
+    /* 체크박스의 너비를 지정 */
+    height: 21px;
+    /* 체크박스의 높이를 지정 */
+    line-height: 25px;
+    /* 세로정렬을 위해 높이값과 일치 */
+    margin: -2px 8px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    background: #ffffff;
+    border: 1px solid #cacece;
+    border-radius : 15px;
+    /* 출처: https: //webdir.tistory.com/433 [WEBDIR]*/
+}
+
+input[type="checkbox"]:checked + label:before {
+    content: '\2713';
+    /* 체크표시 유니코드 사용 */
+    color: #04B486;
+    border-color: #04B486;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* 출처: https: //webdir.tistory.com/433 [WEBDIR]*/
 
 #background{
     margin-top: 5%;
@@ -33,7 +95,8 @@ ul{
 }
 
 .sub-box{
-    padding-left: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
@@ -51,6 +114,7 @@ ul{
 
 #date{
     border-radius: inherit;
+    padding-top: 20px;
 }
 
 h2#ymd{
@@ -65,7 +129,6 @@ p#day{
 
 #remainder{
     color: #04B486;
-    
 }
 
 
