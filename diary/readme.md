@@ -21,7 +21,7 @@
 * todolist 입력창을 생성 또는 삭제함 [toggle](https://github.com/ss-won/todolist/blob/ver2.0/js/toggle.js) 
 * todolist 삭제버튼이 리스트에 접근할때만 보이게 하는 기능 [add](https://github.com/ss-won/todolist/blob/ver2.0/js/add.js)
 
-## 개선사항(ex:버그) || 추가할 사항
+## 개선사항 OR 추가할 사항
 * SVG 애니메이션 작업
     * 추가버튼 누르면 -> 30도회전 후 빨간색으로 색 변환
     * submit이벤트가 발생하면 -> -30도 회전 후 기존 색으로 재변환
