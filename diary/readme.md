@@ -27,7 +27,7 @@
     * submit이벤트가 발생하면 -> -30도 회전 후 기존 색으로 재변환
 * 기타 CSS작업
     * 할일리스트 오는 자리 스크롤 달기
-    * 기타 세부 border, design
+    * subbox[id: tail]부분 세부 수정
 
 ## 추후 더 공부해야 할 부분(이 코드는 Whyrano...)
 * html의 <script>의 type 속성값 text/javascript 와 module의 차이는 무엇인가?
