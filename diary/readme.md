@@ -1,11 +1,12 @@
 # 개_발_일_지
-## 주요 변경사항[ver4.0]
+## 주요 변경사항[ver5.0]
 <img src="./result/ver5.png" alt="목표예시"></img></br>
 
 * todolist 표시 공간 스크롤 달기
     - absolute, relative로 내부 크기 조절
     - overflow auto, hidden을 이용하여 내부 div에만 scroll이 작동하도록 적용
 * `<input type="text">` 크기 확대, 내부 배경 색 삽입과 위치 조절
+* checkbox의 상태가 checked일때, label 색상 바꾸기
 * plus 버튼(svn object) 크기, 색상, 위치 조정
 * 기타 여백 조정(날짜와 요일, 남은할일 표식, etc)
 
