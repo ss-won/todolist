@@ -1,5 +1,5 @@
 body {
-    background-color:#d6dbdf;
+    background-color:#ecedee;
 }
 
 div {
@@ -12,11 +12,19 @@ a {
 
 a.rm {
     position: absolute;
-    right: 30%;
+    right: 0;
+}
+
+a#toggle {
+    position: relative;
+    display: block;
+    text-align: center;
+    left: -15px;
+    top: 98.5%;
 }
 
 hr {
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 object{
@@ -29,8 +37,9 @@ ul{
     margin-bottom: 0px;
 }
 
-li {
-    padding-bottom: 15px;
+li._todolist{
+    padding-bottom: 18px;
+    position: relative;
 }
 
 /* 진짜 체크박스 */
@@ -49,6 +58,10 @@ input[type="checkbox"] + label {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+}
+
+input[type="checkbox"]:checked + label {
+    color: #cacece;
 }
 
 /* 가짜 체크박스 */
@@ -81,6 +94,14 @@ input[type="checkbox"]:checked + label:before {
 
 /* 출처: https: //webdir.tistory.com/433 [WEBDIR]*/
 
+input[type="text"] {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    width: 80%;
+    line-height: 2.2em;
+}
+
 #background{
     margin-top: 5%;
     height : 80%;
@@ -89,14 +110,23 @@ input[type="checkbox"]:checked + label:before {
 .main-box{
     background-color: #ffffff;
     border-radius: 10px;
-    margin-left: 25%;
-    margin-right: 25%;
-    height: 100%;
+    position: absolute;
+    height: inherit;
+    width: 28%;
+    left: 35%;
+    overflow: hidden;
 }
 
 .sub-box{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.external-box{
+    background-color: #cacece;
+    position: relative;
+    bottom: 30%;
+    height: 100%;
 }
 
 
@@ -105,7 +135,8 @@ input[type="checkbox"]:checked + label:before {
 }
 
 #body{
-
+    height: inherit;
+    overflow-y: auto;
 }
 
 #tail{
@@ -122,13 +153,17 @@ h2#ymd{
     color: #2E2E2E;
 }
 
-p#day{
+p#day {
     margin-top: 5px;
     color: gray;
 }
 
-#remainder{
+#remainder {
     color: #04B486;
+}
+
+#remainder > b > p {
+    padding-top: 15px;
 }
 
 

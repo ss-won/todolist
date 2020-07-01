@@ -7,7 +7,7 @@ export const indexMap = new Map();
 export const add = (e) => {
     e.preventDefault();
     const li = mkList();
-    tg.body.removeChild(tg.body.lastChild);
+    tg.tail.remove();
     li.addEventListener("change", checkit);
     li.addEventListener("mouseenter", (e) => {
         let btn = e.target.lastChild;

@@ -11,7 +11,7 @@ export const add = (e) => {
   //추가할 list dom 만들기
   const li = mkList();
   //입력창닫기
-  tg.body.removeChild(tg.body.lastChild);
+  tg.tail.remove();
 
   /*========apply eventlistener=========*/
   li.addEventListener("change", checkit);

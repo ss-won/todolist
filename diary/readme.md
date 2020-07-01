@@ -1,17 +1,19 @@
 # 개_발_일_지
 ## 주요 변경사항[ver4.0]
-<img src="./result/ver4.png" alt="목표예시"></img></br>
+<img src="./result/ver5.png" alt="목표예시"></img></br>
 
-* 날짜 및 요일 창과 할일 리스트 간 사이 구분선 추가
-* 주요 UI 여백 수정
-    * 휴지통 버튼 absolute 형태로 변경 -> 사이트 크기와 상관없이 일정한 자리 유지
-    * 할일 리스트(li) padding 조정을 통해 사이 거리 조절
-* 체크박스 디자인 수정
+* todolist 표시 공간 스크롤 달기
+    - absolute, relative로 내부 크기 조절
+    - overflow auto, hidden을 이용하여 내부 div에만 scroll이 작동하도록 적용
+* `<input type="text">` 크기 확대, 내부 배경 색 삽입과 위치 조절
+* plus 버튼(svn object) 크기, 색상, 위치 조정
+* 기타 여백 조정(날짜와 요일, 남은할일 표식, etc)
 
 ### 지난 ver 개발일지 보러가기
 * [ver1](https://github.com/ss-won/todolist/tree/ver1.3/diary) - 2020/5/13 개발일지
 * [ver2](https://github.com/ss-won/todolist/blob/ver2.0/diary) - 2020/5/20 ~ 2020/6/4 개발일지
 * [ver3](https://github.com/ss-won/todolist/tree/ver3.1/diary) - 2020/6/5 개발일지
+* [ver4](https://github.com/ss-won/todolist/tree/ver4.1/diary) - 2020/6/27
 
 ## 현재까지 작동하는 기능
 * todolist에 할일을 입력 [add](https://github.com/ss-won/todolist/blob/ver2.0/js/add.js)
@@ -26,8 +28,8 @@
     * 추가버튼 누르면 -> 30도회전 후 빨간색으로 색 변환
     * submit이벤트가 발생하면 -> -30도 회전 후 기존 색으로 재변환
 * 기타 CSS작업
-    * 할일리스트 오는 자리 스크롤 달기
-    * subbox[id: tail]부분 세부 수정
+    * 할일리스트 오는 자리 스크롤 크기 조절 -> 일정 이상 리스트가 추가되면 안보이는 현상 나타남
+    * `<input type=text>`와 plus btn 사이 여백과 크기 조정
 
 ## 추후 더 공부해야 할 부분(이 코드는 Whyrano...)
 * html의 <script>의 type 속성값 text/javascript 와 module의 차이는 무엇인가?
@@ -37,3 +39,5 @@
 ## Reference
 *  웹에서 svg 사용하기 실습가이드 <https://svgontheweb.com/ko/>
 *  체크박스 CSS 변경하기 <https://webdir.tistory.com/433>
+*  [css] position (static, relative, absolute, fixed) 의 속성 <https://electronic-moongchi.tistory.com/26>
+*   overflow 속성 <https://aboooks.tistory.com/84>

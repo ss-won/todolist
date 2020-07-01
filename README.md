@@ -28,10 +28,11 @@ velopert님의 react로 todolist 만들기 강의에서 제작된 todolist를 �
     <br>
 
 * 개발일지
-    * [ver1.0](https://github.com/ss-won/todolist/tree/ver1.3/diary)
-    * [ver2.0](https://github.com/ss-won/todolist/blob/ver2.0/diary)
-    * [ver3.0](https://github.com/ss-won/todolist/blob/ver3.1/diary)
-    * [ver4.0](https://github.com/ss-won/todolist/blob/ver4.1/diary)
+    * [ver1](https://github.com/ss-won/todolist/tree/ver1.3/diary)
+    * [ver2](https://github.com/ss-won/todolist/blob/ver2.0/diary)
+    * [ver3](https://github.com/ss-won/todolist/blob/ver3.1/diary)
+    * [ver4](https://github.com/ss-won/todolist/blob/ver4.1/diary)
+    * [ver5](https://github.com/ss-won/todolist/blob/ver5.0/diary)
     
     * [개발나부랭이블로그](https://blog.naver.com/PostList.nhn?blogId=j_wish_&from=postList&categoryNo=6)
    
