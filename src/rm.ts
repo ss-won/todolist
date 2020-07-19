@@ -15,6 +15,7 @@ export const remove = (e)=>{
     //console.log(todoList.childElementCount);
     //console.log(typeof click_i, todoList.childElementCount);
 }
+
 const update = (idx:string,l:number) => {
     //let li = todoList.children;
     let nidx = parseInt(idx);

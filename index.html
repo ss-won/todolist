@@ -6,8 +6,9 @@
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="background">
+    <div class="background">
         <div class="main-box" id="main">
+
             <div class="sub-box" id="head">
                 <div id="date">
                     <ul>
@@ -18,22 +19,27 @@
                 <div id="remainder">
                     <b><p>할 일 <span id="rm_num">0</span>개 남음</p></b>
                 </div>
-            </div>
+            </div> <!-- sub box #1 : date, remainder -->
 
             <hr>
 
             <div class="sub-box" id="body">
                 <ul id="todolist">
                 </ul>
-            </div>
+            </div><!-- sub box #2 : todolist -->
 
+        </div><!--main box-->
+
+        <div class="toggle-wrapper">
+            <a href id="toggle">
+                <object type="image/svg+xml" data="/images/plus-circle.svg">
+                    "이 브라우저는 svg를 지원하지 않습니다."
+                </object>
+            </a>
         </div>
-        <a href id="toggle">
-            <object type="image/svg+xml" data="/images/plus-circle.svg">
-                Add
-            </object>
-        </a>
-    </div>
+        
+    </div><!--background-->
+
     <script type="module" src="/js/main.js"></script>
 </body>
 </html>

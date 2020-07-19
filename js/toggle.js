@@ -8,18 +8,23 @@ const msg = `<input type="text" id="add" name="add" placeholder="할일을 입�
 const form = document.createElement("form");
 form.id = "submit";
 form.innerHTML = msg;
+const obj = btn.children[0];
+const svgDocument = obj.contentDocument;
+const svg = svgDocument.getElementsByClassName("plusbtn");
 const toggle = (e) => {
     e.preventDefault();
+    console.log(svg[0]);
     const submit = document.getElementById("submit");
     if (submit === null) {
         form.addEventListener("submit", add);
         tail.appendChild(form);
         mainbox.appendChild(tail);
         document.getElementById("add").focus();
-        console.log(form);
+        svg[0].setAttribute("fill", "red");
     }
     else {
         tail.remove();
+        svg[0].setAttribute("fill", "#04B486");
     }
     ;
 };

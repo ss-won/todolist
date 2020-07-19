@@ -9,5 +9,3 @@ printDate(_year, _month, _date);
 printDay(_day);
 
 tg.btn.addEventListener("click", tg.toggle);
-
-

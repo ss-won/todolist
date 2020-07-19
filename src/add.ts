@@ -76,7 +76,7 @@ const mkBtn = (li) => {
     let svg = svgDocument.getElementsByClassName("trash");
     svg[0].setAttribute("fill", "#FA5858");
     svg[0].setAttribute("style", "opacity:1");
-    //console.log(svg[0]);
+    console.log(obj);
   })
   _anchor.addEventListener("mouseleave",(e)=>{
     let obj = (<HTMLInputElement>e.target).firstChild;
