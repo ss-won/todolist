@@ -3,12 +3,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-List</title>
+    <link rel="shortcut icon" href="#">
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="background">
+        <div class="error">
+            <h2>440px X 730px 이상의 device 환경에서 사용해주세요. ✋</h2>
+            <p>Please use it in environment of 440px X 730px or larger.</p>
+        </div>
         <div class="main-box" id="main">
-
             <div class="sub-box" id="head">
                 <div id="date">
                     <ul>
@@ -32,14 +36,13 @@
 
         <div class="toggle-wrapper">
             <a href id="toggle">
-                <object type="image/svg+xml" data="/images/plus-circle.svg">
+                <object id="btn" type="image/svg+xml" data="/images/plus-circle.svg">
                     "이 브라우저는 svg를 지원하지 않습니다."
                 </object>
             </a>
         </div>
         
     </div><!--background-->
-
-    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

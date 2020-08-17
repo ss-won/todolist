@@ -6,171 +6,203 @@ div {
     border: 0px;
 }
 
-a {
-    display: inline-block;
-}
+ @media screen and (min-width:400px) and (min-height:650px){
+    
+    a {
+        display: inline-block;
+    }
 
-a.rm {
-    position: absolute;
-    right: 0;
-}
+    a.rm {
+        position: absolute;
+        right: 0;
+    }
 
-hr {
-    opacity: 0.2;
-}
+    hr {
+        opacity: 0.2;
+    }
 
-object{
-    pointer-events: none;
-    background-color: white;
-    border-radius: 50px;
-    margin: 0;
-    animation: reverse;
-}
+    object{
+        pointer-events: none;
+        background-color: white;
+        border-radius: 50px;
+        margin: 0;
+        transition: all linear 0.1s;
+    }
 
-ul{
-    list-style: none;
-    padding-left: 0px;
-    margin-bottom: 0px;
-}
+    ul{
+        list-style: none;
+        padding-left: 0px;
+        margin: 5px;
+    }
 
-li._todolist{
-    padding-bottom: 18px;
-    position: relative;
-}
+    li._todolist{
+        padding-bottom: 18px;
+        position: relative;
+    }
 
-/* 진짜 체크박스 */
-input[type = "checkbox"] {
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: -1px;
-    border: 0;
-}
+    /* 진짜 체크박스 */
+    input[type = "checkbox"] {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: -1px;
+        border: 0;
+    }
 
-input[type="checkbox"] + label {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
+    input[type="checkbox"] + label {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
 
-input[type="checkbox"]:checked + label {
-    color: #cacece;
-}
+    input[type="checkbox"]:checked + label {
+        color: #cacece;
+    }
 
-/* 가짜 체크박스 */
-input[type="checkbox"] + label:before {
-    content: ' ';
-    display: inline-block;
-    width: 21px;
-    /* 체크박스의 너비를 지정 */
-    height: 21px;
-    /* 체크박스의 높이를 지정 */
-    line-height: 25px;
-    /* 세로정렬을 위해 높이값과 일치 */
-    margin: -2px 8px 0 0;
-    text-align: center;
-    vertical-align: middle;
-    background: #ffffff;
-    border: 1px solid #cacece;
-    border-radius : 15px;
+    /* 가짜 체크박스 */
+    input[type="checkbox"] + label:before {
+        content: ' ';
+        display: inline-block;
+        width: 21px;
+        /* 체크박스의 너비를 지정 */
+        height: 21px;
+        /* 체크박스의 높이를 지정 */
+        line-height: 25px;
+        /* 세로정렬을 위해 높이값과 일치 */
+        margin: -2px 8px 0 0;
+        text-align: center;
+        vertical-align: middle;
+        background: #ffffff;
+        border: 1px solid #cacece;
+        border-radius : 15px;
+        /* 출처: https: //webdir.tistory.com/433 [WEBDIR]*/
+    }
+
+    input[type="checkbox"]:checked + label:before {
+        content: '\2713';
+        /* 체크표시 유니코드 사용 */
+        color: #04B486;
+        border-color: #04B486;
+        font-size: 20px;
+        text-align: center;
+    }
+
     /* 출처: https: //webdir.tistory.com/433 [WEBDIR]*/
+
+    input[type="text"] {
+        position: absolute;
+        left: 10%;
+        top: 35%;
+        width: 80%;
+        line-height: 2.5em;
+    }
+
+    .background{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        margin: 0;
+        background-color: #ecedee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .error{
+        visibility: hidden;
+        display: none;
+    }
+
+    .main-box{
+        background-color: #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        height: 600px;
+        width: 400px;
+        overflow-y: hidden;
+        visibility: visible;
+    }
+
+    .sub-box{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .external-box{
+        background-color: #cacece;
+        position: absolute;
+        top:80%;
+        width: 100%;
+        height: 20%;
+    }
+
+    .toggle-wrapper {
+        position: relative;
+        top:300px;
+    }
+
+    #body{
+        height: 70%;
+        overflow: auto;
+        margin: 20px 0px;
+    }
+
+    #tail{
+
+    }
+
+    #date{
+        border-radius: inherit;
+        padding-top: 20px;
+    }
+
+    h2#ymd{
+        margin-bottom: 0px;
+        color: #2E2E2E;
+    }
+
+    p#day {
+        margin-top: 5px;
+        color: gray;
+    }
+
+    #remainder {
+        color: #04B486;
+    }
+
+    #remainder > b > p {
+        padding-top: 15px;
+    }
+
 }
 
-input[type="checkbox"]:checked + label:before {
-    content: '\2713';
-    /* 체크표시 유니코드 사용 */
-    color: #04B486;
-    border-color: #04B486;
-    font-size: 20px;
-    text-align: center;
+@media not screen and (min-width:400px) and (min-height:650px){
+    .background{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        margin: 0;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .error{
+        text-align: center;
+        position: absolute;
+    }
+
+    .main-box{
+        visibility: hidden;
+    }
+    
+    .toggle-wrapper{
+        visibility: hidden;
+    }
 }
-
-/* 출처: https: //webdir.tistory.com/433 [WEBDIR]*/
-
-input[type="text"] {
-    position: absolute;
-    left: 10%;
-    top: 5%;
-    width: 80%;
-    line-height: 2.2em;
-}
-
-.background{
-    display: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    margin: 0;
-    background-color: #ecedee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-box{
-    background-color: #ffffff;
-    border-radius: 10px;
-    position: absolute;
-    height: 85%;
-    width: 400px;
-    overflow-y: hidden;
-}
-
-.sub-box{
-    padding-left: 8%;
-    padding-right: 8%;
-}
-
-.external-box{
-    background-color: #cacece;
-    position: relative;
-    bottom: 30%;
-    height: 100%;
-}
-
-.toggle-wrapper {
-    position: relative;
-    top: 43%;
-}
-
-#head{
-
-}
-
-#body{
-    height: inherit;
-    overflow: auto;
-}
-
-#tail{
-
-}
-
-#date{
-    border-radius: inherit;
-    padding-top: 20px;
-}
-
-h2#ymd{
-    margin-bottom: 0px;
-    color: #2E2E2E;
-}
-
-p#day {
-    margin-top: 5px;
-    color: gray;
-}
-
-#remainder {
-    color: #04B486;
-}
-
-#remainder > b > p {
-    padding-top: 15px;
-}
-
-

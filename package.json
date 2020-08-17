@@ -1,0 +1,21 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Vanilla-js+Typescript를 이용한 Todolist로 velopert님의 react로 todolist 만들기 강의에서 제작된 todolist를 클론코딩 하였습니다. ## Aim <img src=\"result.gif\" alt=\"목표예시\"></img></br>",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ss-won/todolist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ss-won/todolist/issues"
+  },
+  "types": "modules",
+  "homepage": "https://github.com/ss-won/todolist#readme"
+}
