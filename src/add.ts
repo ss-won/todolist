@@ -3,52 +3,50 @@ import { checkit, checked } from "./check.js";
 import { tg } from './toggle.js';
 
 /*
-  _remainer : HTMLElement // 남은할 일 표시하는 <div> 요소
-  todolist : HTMLElement // todolist가 들어갈 <ui> 요소
-  indexMap : Object // 각 li 요소를 id 값으로 매핑할 map 자료구조
+  _remainer : HTMLElement // <div> element that represent the number of remaining todos.
+  todolist : HTMLElement // <ui> element that hold the todolist.
+  indexMap : Object // Map Object for mapping li element and inner id.
 */
 const _remainer = document.getElementById("rm_num") as HTMLInputElement;
 const todoList = document.getElementById("todolist");
 const indexMap = new Map();
 
-/* Input 창에 할일 적어서 Enter -> 리스트에 추가시키기 */
+/* A eventhandler function for adding new list of todos in <ui> element */
 const add = (e) => {
-  /* change event의 기본 동작 정지 */
+  /* prevent the default function for 'submit' event */
   e.preventDefault();
-  /* 추가할 list DOM 만들기 */
+  /* make <li> element to add */
   const li = mkList();
-  /* list를 만든 후, toggle 객체에 있는 '입력창'요소 collapse */
+  /* after making <li>, remove input[type=text] element. */
   tg.tail.remove();
   tg.animateReverse();
 
   /* === { apply eventlistener } === */
   li.addEventListener("change", checkit);
   li.addEventListener("mouseenter", (e) => {
-    /* <li> 요소 내부 버튼 객체 변수에 담기 */
-    let btn = (e.target as HTMLInputElement).lastChild as HTMLInputElement;
+    const btn = (e.target as HTMLInputElement).lastChild as HTMLInputElement;
     btn.style.visibility = "visible";
   });
   li.addEventListener("mouseleave", (e) => {
-    /* <li> 요소 내부 버튼 객체 변수에 담기 */
-    let btn = (e.target as HTMLInputElement).lastChild as HTMLInputElement;
-    (<HTMLInputElement>btn).style.visibility = "hidden";
+    const btn = (e.target as HTMLInputElement).lastChild as HTMLInputElement;
+    btn.style.visibility = "hidden";
   })
 }
 
 const mkList = () => {
-  /*========== { li element 생성 후 ui 요소에 넣기 } ==========*/
-  let input = (<HTMLInputElement>document.getElementById("add"));
-  let val = input.value;
+  /*========== { append li element to ui element } ==========*/
+  const input = document.getElementById("add") as HTMLInputElement;
+  const val = input.value;
   const li = document.createElement("li");
   li.className = "_todolist";
   todoList.appendChild(li);
-  // <input> 요소 내용 삭제 
+  // remove inner value of <input> element. 
   input.value = "";
 
-  /*========== { li요소에 담길 element 생성 } ==========*/
-  // 내부 checkbox form 만들기
+  /*========== { append child to li element } ==========*/
+  // make inner checkbox form
   li.appendChild(mkInner(li, val));
-  // 내부 btn 만들기
+  // make inner button
   li.appendChild(mkBtn(li));
   return li;
 }
@@ -59,13 +57,13 @@ const mkInner = (li, val) => {
   const _label = document.createElement("label");
   /*======== { create check box & label } =========*/
   _inner.type = "checkbox";
-  _inner.id = todoList.children.length.toString();
+  _inner.id = todoList.childElementCount.toString();
   _label.setAttribute("for", _inner.id);
   _label.innerText = val;
   frag.appendChild(_inner);
   frag.appendChild(_label);
   /*======== { set index-map } =========*/
-  indexMap.set(li, _inner.id);
+  indexMap.set(li,_inner.id);
   _remainer.innerText = (indexMap.size - checked.size).toString();
   return frag;
 }
@@ -83,17 +81,16 @@ const mkBtn = (li) => {
   /*=========={ apply eventlistener }==========*/
   _anchor.addEventListener("click", remove);
   _anchor.addEventListener("mouseenter", (e) => {
-    let obj = (<HTMLInputElement>e.target).firstChild;
-    let svgDocument = (<HTMLObjectElement>obj).contentDocument;
-    let svg = svgDocument.getElementsByClassName("trash");
+    const obj = (e.target as HTMLInputElement).firstChild;
+    const svgDocument = (obj as HTMLObjectElement).contentDocument;
+    const svg = svgDocument.getElementsByClassName("trash");
     svg[0].setAttribute("fill", "#FA5858");
     svg[0].setAttribute("style", "opacity:1");
-    console.log(obj);
   })
   _anchor.addEventListener("mouseleave", (e) => {
-    let obj = (<HTMLInputElement>e.target).firstChild;
-    let svgDocument = (<HTMLObjectElement>obj).contentDocument;
-    let svg = svgDocument.getElementsByClassName("trash");
+    const obj = (e.target as HTMLInputElement).firstChild;
+    const svgDocument = (obj as HTMLObjectElement).contentDocument;
+    const svg = svgDocument.getElementsByClassName("trash");
     svg[0].setAttribute("fill", "currentColor");
     svg[0].setAttribute("style", "opacity:0.3");
   })

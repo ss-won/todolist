@@ -32,7 +32,7 @@ div {
     ul{
         list-style: none;
         padding-left: 0px;
-        margin: 5px;
+        margin: 2px 5px 18px 5px;
     }
 
     li._todolist{

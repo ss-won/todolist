@@ -1,15 +1,15 @@
-/* 현재 날짜 불러오기 */
+/* get <div> elements associated to date printing */
 const divDate = document.getElementById("_date");
 const divDay = document.getElementById("_day");
 
-/* 년, 월, 일을 표시하는 함수 */
+/* A function to print year, month, date */
 const printDate = (y, m, dt) => {
     m += 1;
     const date = `<h2 id="ymd">${y}년 ${m}월 ${dt}일</h2>`;
     divDate.innerHTML = date;
 }
 
-/* 요일을 표시하는 함수 */
+/* A function to print day */
 const printDay = (dy) => {
     //0-1 Mon-Sun
     const Day = ['일', '월', '화', '수', '목', '금', '토'];
