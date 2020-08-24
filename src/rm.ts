@@ -6,9 +6,9 @@ export const remove:EventListener = (e) => {
     e.preventDefault();
     const click_li = (e.target as HTMLInputElement).parentElement;
     const click_i = (click_li.firstChild as HTMLInputElement).id;
+    update(click_i, todoList.childElementCount);
     indexMap.delete(click_li);
     todoList.removeChild(click_li);
-    update(click_i, todoList.childElementCount);
     _remainer.innerText = (indexMap.size-checked.size).toString();
     return undefined;
 }
@@ -40,7 +40,7 @@ const update = (idx:string,l:number) => {
     /* ----------------------- update list in <ui> element -------------------- */
     for(let i=nidx-1;i<l;i++){
         const li = todoList.children;
-        if(indexMap.get(li[i])>idx){
+        if(indexMap.get(li[i])*1>nidx){
             indexMap.set(li[i],indexMap.get(li[i])-1+'');
             /* li[i].children[0] : <input> node, li[i].children[1] : <label> node */
             li[i].children[0].id = indexMap.get(li[i]);
