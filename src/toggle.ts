@@ -40,6 +40,7 @@ const toggle = (e) => {
     if (!submit) {
         /* add eventhandler function for 'submit' event to form element. */
         form.addEventListener("submit", add);
+        (form.firstChild as HTMLInputElement).value = "";
         /* append new elements to #main's children. */
         tail.appendChild(form);
         mainbox.appendChild(tail);
