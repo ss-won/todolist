@@ -65,7 +65,6 @@ npm start
         * TypeScript의 DOM Manipulation(Ref: _lib.  dom.d.ts_)
         * JavaScirpt type=module의 작동 방식
         * HTMLElement 요소의 배치 구성 방법(style,  display 속성)
-    
 * 개발일지
     * [ver1](https://github.com/ss-won/todolist/tree/ver1.3/diary)
     * [ver2](https://github.com/ss-won/todolist/blob/ver2.0/diary)
@@ -75,4 +74,8 @@ npm start
     * [ver6](https://github.com/ss-won/todolist/blob/ver6.0/diary)
     
     * [개발나부랭이블로그](https://blog.naver.com/PostList.nhn?blogId=j_wish_&from=postList&categoryNo=6)
+
+### Reference 
+* 개발 시 참고한 사이트들은 개발일지에 정리하였습니다.
+* SVG 파일은 모두 [Fontawesome](https://fontawesome.com/)에서 다운받아 사용하였습니다.
    
