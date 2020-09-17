@@ -1,6 +1,6 @@
 # toDoList
 [velopert님](https://velopert.com/)의 <벨로퍼트와 함께하는 모던 리액트: 멋짓 투두리스트 만들기> 강좌의 todolist를 클론코딩 하였습니다.<br>
-Typescript(Vanila-js)를 이용하여 제작되었으며, 타 라이브러리(jQuery, React, Vue, Angular)는 사용되지 않았습니다.<br>
+Typescript(Vanila-js)를 이용하여 제작되었으며, 타 라이브러리 및 (jQuery, React, Vue, Angular)는 사용되지 않았습니다.<br>
 HTML, CSS, Typescript(js)가 사용되었습니다.
 <br/><br/>
 [![github](https://img.shields.io/github/v/tag/ss-won/todolist?color=green)]()
